@@ -1,8 +1,8 @@
-resource "aws_codebuild_project" "example" {
+resource "aws_codebuild_project" "hello_world" {
   name          = "Hello world project"
   description   = "Hello world project using CodeBuild with GitHub"
   build_timeout = "5"
-  service_role  = aws_iam_role.example.arn
+  service_role  = aws_iam_role.hw_role.arn
 
   artifacts {
     type = "NO_ARTIFACTS"
@@ -16,12 +16,12 @@ resource "aws_codebuild_project" "example" {
 
   source {
     type              = "GITHUB"
-    location          = "https://github.com/your_username/your_repo.git"
+    location          = "https://github.com/andygolubev/aws-devops-pro-exam-practice.git"
   }
 }
 
-resource "aws_iam_role" "example" {
-  name = "example_codebuild_role"
+resource "aws_iam_role" "hw_role" {
+  name = "hw_codebuild_role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -37,9 +37,9 @@ resource "aws_iam_role" "example" {
   })
 }
 
-resource "aws_iam_role_policy" "example" {
-  name = "example_codebuild_policy"
-  role = aws_iam_role.example.id
+resource "aws_iam_role_policy" "hw_role_policy" {
+  name = "hw_codebuild_policy"
+  role = aws_iam_role.hw_role.id
 
   policy = jsonencode({
     Version = "2012-10-17"
