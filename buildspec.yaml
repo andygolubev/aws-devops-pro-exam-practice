@@ -7,12 +7,12 @@ phases:
   pre_build:
     commands:
       - echo Installing source dependencies...
-      - codebuild-breakpoint
-      - chmod +x gradlew
+      # - codebuild-breakpoint
+      # - chmod +x gradlew
   build:
     commands:
       - echo Build started on `date`
-      - ./gradlew clean build
+      - ./app/gradlew clean build
   post_build:
     commands:
       - echo Build completed on `date`
