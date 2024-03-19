@@ -7,6 +7,7 @@ phases:
   pre_build:
     commands:
       - echo Installing source dependencies...
+      - codebuild-breakpoint
       - chmod +x gradlew
   build:
     commands:

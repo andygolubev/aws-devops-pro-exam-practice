@@ -1,5 +1,5 @@
 resource "aws_codebuild_project" "hello_world" {
-  name          = "Hello world project"
+  name          = "Hello-world-project"
   description   = "Hello world project using CodeBuild with GitHub"
   build_timeout = "5"
   service_role  = aws_iam_role.hw_role.arn
