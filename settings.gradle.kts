@@ -1,1 +1,3 @@
 rootProject.name = "helloworld"
+
+include ':app'
