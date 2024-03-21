@@ -25,7 +25,10 @@ phases:
 artifacts:
   files:
     - app/build/libs/*.jar
-    - app/reports/*
+reports:
+  tests:
+    files:
+      - app/reports/*
 
 cache:
   paths:
