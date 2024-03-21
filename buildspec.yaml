@@ -13,6 +13,7 @@ phases:
       - export JAVA_HOME=/usr/local/amazon-corretto-21
       - export PATH=$JAVA_HOME/bin:$PATH
       - ls -al
+      - java --version
   build:
     commands:
       - echo Build started on `date`
