@@ -50,6 +50,7 @@ resource "aws_iam_role_policy" "hw_role_policy" {
           "logs:CreateLogStream",
           "logs:PutLogEvents",
           "secretsmanager:GetSecretValue",
+          "codebuild:*"
         ]
         Resource = "*"
         Effect   = "Allow"
