@@ -12,6 +12,7 @@ phases:
       - sudo mv amazon-corretto-21*/ /usr/local/
       - export JAVA_HOME=/usr/local/amazon-corretto-21
       - export PATH=$JAVA_HOME/bin:$PATH
+      - ls -al
   build:
     commands:
       - echo Build started on `date`
